@@ -4,31 +4,39 @@ Initiation à Dart
 List, Set, Map et Loops
 
 */
-var sep = "----------------------------";
+
+var IND = 1;
+sep()
+{
+  var SEP = "-------------- Q$IND --------------";
+  print(SEP);
+  IND ++;
+}
 
 void main ()
 {
   //Q1
+  sep();
   List<String> planets = ["Terre", "Mars", "Mercure", "Venus", "Saturne", "Neptune", "Uranus", "Jupiter"];
   // planets.sort();
   // print(planets);
   print(planets..sort()); //method cascades
 
-  print(sep);
   //Q2
+  sep();
   for (var x in planets)
     print(x.toUpperCase());
 
-  print(sep);
   //Q3
+  sep();
   int i = 0;
   while (i < planets.length) {
     print(planets[i].substring(0, 1));
     i ++;
   }
 
-  print(sep);
   //Q4
+  sep();
   int j = 0;
   do {
     print('$j - ' + planets[j]);
@@ -36,8 +44,8 @@ void main ()
   }
   while (j < planets.length);
 
-  print(sep);
   //Q5
+  sep();
   var vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
   for (var p in planets)
   {
@@ -46,13 +54,13 @@ void main ()
       print(pLast);
   }
 
-  print(sep);
   //Q6
+  sep();
   planets.add("Pluton");
   print(planets);
 
-  print(sep);
   //Q7 (cf. class Planet)
+  sep();
   Planet mercure = Planet("Mercure", 91.69);
   Planet saturne = Planet("Saturne", 1275);
   Planet neptune = Planet("Neptune", 4351.40);
@@ -68,8 +76,8 @@ void main ()
   });
 
 
-  print(sep);
   //Q8
+  sep();
   var apollo = {
     "07_1969": "Apollo 11",
     "11_1969" : "Apollo 12",
@@ -82,15 +90,15 @@ void main ()
   print(apollo["07_1971"]);
   print(apollo.keys);
 
-  print(sep);
   //Q9
+  sep();
   print("Before : " + apollo["07_1969"].toString());
   apollo["07_1969"] = "Bloup";
   print("After : " + apollo["07_1969"].toString());
   print(apollo);
 
-  print(sep);
   //Q10
+  sep();
   var sun = SolarSystemElement("Sun", Kind.star);
   var earth = SolarSystemElement("Earth", Kind.planet);
   var moon = SolarSystemElement("Moon", Kind.satellite);

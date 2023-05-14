@@ -5,58 +5,63 @@ String
 
 */
 
-
-var sep = "----------------------------";
+var IND = 1;
+sep()
+{
+  var SEP = "-------------- Q$IND --------------";
+  print(SEP);
+  IND ++;
+}
 
 void main()
 {
 //Q1
+  sep();
   print("Hello world !");
 
-  print(sep);
 //Q2
+  sep();
   String message = "Hello 2 !";
   print(message);
 
-  print(sep);
 //Q3
+  sep();
   String hello = "Hello";
   String world = "World";
   print('$hello $world'); //interpolation
 
-  print(sep);
 //Q4
+  sep();
   print(hello + ' ' + world);
 
-  print(sep);
 //Q5
+  sep();
   print(message.substring(0,5));
 
-  print(sep);
 //Q6
+  sep();
   String msg = "Hello, World!";
   print(msg.length);
 
-  print(sep);
 //Q7
+  sep();
   String welcome = "Hello World !";
   print(welcome.toUpperCase().replaceAll("E", "3").replaceAll("L", "1").replaceAll("O", "8").replaceFirst(" ", ", "));
 
-  print(sep);
 //Q8
+  sep();
   welcome = "Hello World";
   final List<String> list = List.unmodifiable(welcome.split(" ")); //immutable String list
   print(list);
   //list.add("value");
 
-  print(sep);
 //Q9
+  sep();
   String pwd = "";
   pwd == "" ? print("Mot de passe absent") : print("Mot de passe fourni");
 
-  print(sep);
 //Q10
+  sep();
   var email = "john@doe.com";
   print("Email " + (email.contains("@") && email.contains(".") ? "valide" : "incorrect"));
-  
 }
